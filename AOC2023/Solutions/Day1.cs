@@ -1,5 +1,5 @@
-﻿namespace AOC2023.Day1 {
-    public class DayOne(string inputFilePath) : BaseSolution(inputFilePath) {
+﻿namespace AOC2023.Solutions {
+    public class Day1(string inputFilePath) : BaseSolution(inputFilePath) {
 
         protected override string PartOne() {
             return InputReaderUtil.RawLines(inputFilePath).Select(l => int.Parse($"{l.First(c => char.IsDigit(c))}{l.Last(c => char.IsDigit(c))}")).Sum().ToString();
