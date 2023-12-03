@@ -9,16 +9,20 @@ namespace AOC2023 {
         }
 
         public void SolvePart1() {
+            Stopwatch timer = Stopwatch.StartNew();
             string result = PartOne();
-            Console.WriteLine(result);
+            timer.Stop();
+            Console.WriteLine($"Part 1 result: {result} - {timer.ElapsedMilliseconds}");
             SetClipboard(result);
         }
 
         protected abstract string PartOne();
 
         public void SolvePart2() {
+            Stopwatch timer = Stopwatch.StartNew();
             string result = PartTwo();
-            Console.WriteLine(result);
+            timer.Stop();
+            Console.WriteLine($"Part 2 result: {result} - {timer.ElapsedMilliseconds}");
             SetClipboard(result);
         }
         protected abstract string PartTwo();
@@ -36,8 +40,6 @@ namespace AOC2023 {
             clipboardExecutable.Start();
             clipboardExecutable.StandardInput.Write(value);
             clipboardExecutable.StandardInput.Close();
-
-            return;
         }
 
     }
