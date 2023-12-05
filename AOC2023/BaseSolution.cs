@@ -12,7 +12,7 @@ namespace AOC2023 {
             Stopwatch timer = Stopwatch.StartNew();
             string result = PartOne();
             timer.Stop();
-            Console.WriteLine($"Part 1 result: {result} - {timer.ElapsedMilliseconds}");
+            Console.WriteLine($"Part 1 result: {result} - {timer.ElapsedMilliseconds}ms elapsed");
             SetClipboard(result);
         }
 
@@ -22,7 +22,7 @@ namespace AOC2023 {
             Stopwatch timer = Stopwatch.StartNew();
             string result = PartTwo();
             timer.Stop();
-            Console.WriteLine($"Part 2 result: {result} - {timer.ElapsedMilliseconds}");
+            Console.WriteLine($"Part 2 result: {result} - {timer.ElapsedMilliseconds}ms elapsed");
             SetClipboard(result);
         }
         protected abstract string PartTwo();
